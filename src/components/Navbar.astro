@@ -1,0 +1,47 @@
+---
+import InsureLogo from "../assets/logo.svg";
+import hamburguerIcon from "../assets/icons/icon-hamburger.svg";
+import closeIcon from "../assets/icons/icon-close.svg";
+import mobileNavPattern from "../assets/bg-pattern-mobile-nav.svg";
+
+const options: string[] = ["How we work", "Blog", "Account"];
+---
+
+<header
+  class="w-full lg:w-[80%] mx-auto flex items-center justify-between py-8 px-8 relative"
+>
+  <div>
+    <img src={InsureLogo.src} alt="Insure logo" />
+  </div>
+  <button id="menuControl" class="block sm:hidden">
+    <img src={hamburguerIcon.src} alt="open menu icon" />
+  </button>
+  <ul
+    id="menu"
+    class="absolute sm:relative h-screen sm:h-fit list-none flex flex-col sm:flex-row items-center space-x-0 sm:space-x-6 sm:text-neutral-dark-grayish-violet text-white text-lg uppercase w-full sm:w-fit bg-primary-dark-violet sm:bg-transparent top-0 left-0 translate-y-20 sm:translate-y-0 space-y-10 sm:space-y-0 pt-12 sm:pt-0 px-8 sm:px-0 bg-[url(../assets/bg-pattern-mobile-nav.svg)] sm:bg-none bg-bottom bg-no-repeat sm:flex transition-opacity duration-200 opacity-0 sm:opacity-100"
+  >
+    {
+      options.map((option) => (
+        <li class="transition-colors duration-200 cursor-pointer hover:text-neutral-very-dark-violet">
+          {option}
+        </li>
+      ))
+    }
+    <button
+      class="px-6 py-2 bg-white border-2 border-primary-dark-violet text-primary-dark-violet uppercase cursor-pointer transition-colors duration-200 ease-in-out hover:bg-primary-dark-violet hover:text-neutral-very-light-gray w-full sm:w-fit"
+    >
+      View plans
+    </button>
+  </ul>
+</header>
+
+<script>
+  const menuControl = document.getElementById("menuControl");
+  const menu = document.getElementById("menu");
+
+  menuControl?.addEventListener("click", () => {
+    const isOpen = menu?.classList.contains("opacity-0");
+    menu?.classList.toggle("opacity-0", !isOpen);
+    menu?.classList.toggle("opacity-100", isOpen);
+  });
+</script>
