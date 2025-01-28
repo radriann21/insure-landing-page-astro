@@ -1,0 +1,43 @@
+---
+import InfoCard from "./InfoCard.astro";
+---
+
+<main class="max-w-full h-full sm:h-[1200px] flex items-center justify-center">
+  <div class="w-full sm:w-[80%] sm:mx-auto p-12 sm:p-0">
+    <h2
+      class="font-headings text-5xl sm:text-6xl text-neutral-very-dark-violet mb-32 text-center sm:text-left"
+    >
+      We're different
+    </h2>
+    <section
+      class="w-full flex flex-col sm:flex-row items-center justify-between space-y-12 sm:space-y-0 sm:space-x-12 mb-32"
+    >
+      <InfoCard
+        title="Snappy Process"
+        text="Our application process can be completed in minutes, not hours. Don't be stuck filling in tedious forms."
+      />
+      <InfoCard
+        title="Affordable Prices"
+        text="We dont' want you worrying about high monthly costs. Our prices may be low, but we still offer the best coverage possible."
+      />
+      <InfoCard
+        title="People First"
+        text="Our plans aren't full of conditions and clauses to prevent payouts. We make sure you're covered when you need it."
+      />
+    </section>
+    <div
+      class="w-full bg-primary-dark-violet text-neutral-very-light-gray p-12 sm:p-16 flex flex-col sm:flex-row items-center justify-between bg-[url(/assets/bg-pattern-how-we-work-mobile.svg)] sm:bg-[url(/assets/bg-pattern-how-we-work-desktop.svg)] bg-contain bg-no-repeat bg-right-top"
+    >
+      <h3
+        class="font-headings text-2xl sm:text-5xl sm:w-[50%] text-center sm:text-left mb-8 sm:mb-0"
+      >
+        Find out more about how we work
+      </h3>
+      <button
+        class="px-6 py-2 border-2 border-white text-neutral-very-light-gray uppercase cursor-pointer transition-colors duration-200 ease-in-out hover:bg-white hover:text-primary-dark-violet w-fit mx-auto sm:mx-0 font-bold"
+      >
+        How we work
+      </button>
+    </div>
+  </div>
+</main>

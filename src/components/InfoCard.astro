@@ -1,0 +1,19 @@
+---
+interface Props {
+  title: string;
+  text: string;
+}
+
+const { title, text } = Astro.props;
+---
+
+<article>
+  <h3
+    class="font-headings text-neutral-very-dark-violet text-2xl text-center sm:text-left mb-4"
+  >
+    {title}
+  </h3>
+  <p class="text-neutral-dark-grayish-violet text-center sm:text-left">
+    {text}
+  </p>
+</article>
