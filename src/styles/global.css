@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary-dark-violet: oklch(28.2% 0.0151 307.87);
+  --color-primary-dark-violet: hsl(256, 26%, 20%);
   --color-primary-grayish-blue: oklch(72.81% 0.0481 258.37);
 
   --color-neutral-very-dark-violet: hsl(270, 9%, 17%);

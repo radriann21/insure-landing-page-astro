@@ -1,6 +1,24 @@
 <section
-  class="max-w-full sm:h-screen bg-primary-dark-violet text-neutral-very-light-gray flex items-center"
+  class="max-w-full sm:h-screen bg-primary-dark-violet text-neutral-very-light-gray flex items-center relative"
 >
+  <div class="hidden absolute sm:block top-0 right-0 z-10">
+    <picture>
+      <source
+        media="(min-width: 670px)"
+        srcset="/assets/bg-pattern-intro-right-desktop.svg"
+      />
+      <img src="/assets/bg-pattern-intro-right-mobile.svg" />
+    </picture>
+  </div>
+  <div class="hidden sm:block absolute bottom-0 left-0 z-10 sm:translate-y-36">
+    <picture>
+      <source
+        media="(min-width: 670px)"
+        srcset="/assets/bg-pattern-intro-left-desktop.svg"
+      />
+      <img src="/assets/bg-pattern-intro-left-mobile.svg" />
+    </picture>
+  </div>
   <div
     class="w-full sm:w-[80%] mx-auto flex flex-col-reverse sm:flex-row items-center justify-between sm:space-x-8 relative"
   >
@@ -33,7 +51,11 @@
           media="(min-width: 670px)"
           srcset="/assets/image-intro-desktop.jpg"
         />
-        <img src="/assets/image-intro-mobile.jpg" alt="Intro image" />
+        <img
+          class="w-full"
+          src="/assets/image-intro-mobile.jpg"
+          alt="Intro image"
+        />
       </picture>
     </div>
   </div>
