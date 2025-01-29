@@ -1,5 +1,8 @@
 ---
 import InfoCard from "./InfoCard.astro";
+import affordablePrices from "../assets/icons/icon-affordable-prices.svg";
+import snappyProcess from "../assets/icons/icon-snappy-process.svg";
+import peopleFirst from "../assets/icons/icon-people-first.svg";
 ---
 
 <main class="max-w-full h-full sm:h-[1200px] flex items-center justify-center">
@@ -15,14 +18,17 @@ import InfoCard from "./InfoCard.astro";
       <InfoCard
         title="Snappy Process"
         text="Our application process can be completed in minutes, not hours. Don't be stuck filling in tedious forms."
+        icon={snappyProcess.src}
       />
       <InfoCard
         title="Affordable Prices"
         text="We dont' want you worrying about high monthly costs. Our prices may be low, but we still offer the best coverage possible."
+        icon={affordablePrices.src}
       />
       <InfoCard
         title="People First"
         text="Our plans aren't full of conditions and clauses to prevent payouts. We make sure you're covered when you need it."
+        icon={peopleFirst.src}
       />
     </section>
     <div

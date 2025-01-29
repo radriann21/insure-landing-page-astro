@@ -2,12 +2,18 @@
 interface Props {
   title: string;
   text: string;
+  icon?: string;
 }
 
-const { title, text } = Astro.props;
+const { title, text, icon } = Astro.props;
 ---
 
 <article>
+  <div
+    class="w-16 h-16 rounded-full bg-primary-grayish-blue mb-4 mx-auto sm:mx-0"
+  >
+    <img loading="lazy" src={icon} alt="icon" />
+  </div>
   <h3
     class="font-headings text-neutral-very-dark-violet text-2xl text-center sm:text-left mb-4"
   >

@@ -1,0 +1,26 @@
+---
+interface Props {
+  title: string;
+  options?: string[];
+}
+const { title, options } = Astro.props;
+---
+
+<div class="col-span-1 mb-12 sm:mb-0">
+  <h5
+    class="mb-2 uppercase text-neutral-dark-grayish-violet font-bold text-center sm:text-left"
+  >
+    {title}
+  </h5>
+  <ul
+    class="mt-8 uppercase space-y-4 text-primary-dark-violet font-bold text-center sm:text-left"
+  >
+    {
+      options?.map((option) => (
+        <li class="cursor-pointer transition-all duration-200 ease-in-out hover:underline">
+          {option}
+        </li>
+      ))
+    }
+  </ul>
+</div>

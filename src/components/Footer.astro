@@ -1,0 +1,58 @@
+---
+import InsureLogo from "../assets/logo.svg";
+import iconFacebook from "../assets/icons/icon-facebook.svg";
+import iconTwitter from "../assets/icons/icon-twitter.svg";
+import iconPinterest from "../assets/icons/icon-pinterest.svg";
+import iconInstagram from "../assets/icons/icon-instagram.svg";
+
+import FooterGridItem from "./FooterGridItem.astro";
+
+const optionsObjects = [
+  {
+    title: "Our Company",
+    options: ["How we work", "Why insure?", "View plans", "Reviews"],
+  },
+  {
+    title: "Help Me",
+    options: ["FAQ", "Terms of use", "Privacy Policy", "Cookies"],
+  },
+  {
+    title: "Contact",
+    options: ["Sales", "Support", "Live chat"],
+  },
+  {
+    title: "Ohters",
+    options: ["Careers", "Prees", "Licenses"],
+  },
+];
+---
+
+<footer
+  class="max-w-full h-full bg-neutral-very-light-gray p-12 bg-[url(/assets/bg-pattern-footer-mobile.svg)] sm:bg-[url(/assets/bg-pattern-footer-desktop.svg)] bg-contain bg-no-repeat bg-left-top"
+>
+  <div class="w-full sm:w-[80%] mx-auto flex flex-col">
+    <div
+      class="pb-8 flex flex-col sm:flex-row items-center justify-between border-b-[1px] border-b-neutral-dark-grayish-violet"
+    >
+      <img
+        loading="lazy"
+        class="mb-8 sm:mb-0"
+        src={InsureLogo.src}
+        alt="insure logo"
+      />
+      <div class="flex items-center space-x-4">
+        <img loading="lazy" src={iconFacebook.src} alt="facebook icon" />
+        <img loading="lazy" src={iconTwitter.src} alt="twitter icon" />
+        <img loading="lazy" src={iconPinterest.src} alt="pinterest icon" />
+        <img loading="lazy" src={iconInstagram.src} alt="instagram icon" />
+      </div>
+    </div>
+    <div class="w-full mt-16 grid grid-cols-1 sm:grid-cols-4">
+      {
+        optionsObjects.map((optionObj) => (
+          <FooterGridItem title={optionObj.title} options={optionObj.options} />
+        ))
+      }
+    </div>
+  </div>
+</footer>
