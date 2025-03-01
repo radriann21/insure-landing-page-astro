@@ -42,5 +42,13 @@ const options: string[] = ["How we work", "Blog", "Account"];
     const isOpen = menu?.classList.contains("opacity-0");
     menu?.classList.toggle("opacity-0", !isOpen);
     menu?.classList.toggle("opacity-100", isOpen);
+
+    if (isOpen) {
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
+    } else {
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+    }
   });
 </script>

@@ -10,16 +10,16 @@ const { title, text, icon } = Astro.props;
 
 <article>
   <div
-    class="w-16 h-16 rounded-full bg-primary-grayish-blue mb-4 mx-auto sm:mx-0"
+    class="w-16 h-16 rounded-full bg-primary-grayish-blue mb-4 mx-auto lg:mx-0"
   >
     <img loading="lazy" src={icon} alt="icon" />
   </div>
   <h3
-    class="font-headings text-neutral-very-dark-violet text-2xl text-center sm:text-left mb-4"
+    class="font-headings text-neutral-very-dark-violet text-2xl text-center lg:text-left mb-4"
   >
     {title}
   </h3>
-  <p class="text-neutral-dark-grayish-violet text-center sm:text-left">
+  <p class="text-neutral-dark-grayish-violet text-center lg:text-left">
     {text}
   </p>
 </article>
